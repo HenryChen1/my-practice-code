@@ -1,12 +1,14 @@
 # my-practice-code
 ===================
 
-*It's the first project for my github. <br>
+## About me
 
-*Also is the start that I learn PYTHON.
+	* It's the first project for my github. <br>
 
-*Welcome to point out my mistakes.
+	* Also is the start that I learn PYTHON.
 
-*I will listen with repectful attention.
+	* Welcome to point out my mistakes.
+
+	* I will listen with repectful attention.
 
 :D
