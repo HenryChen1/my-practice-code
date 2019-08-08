@@ -1,44 +1,38 @@
-from time import sleep
+class Person(object):
+
+    def __init__(self, name, age):
+        self._name = name
+        self._age = age
+
+    # 访问器 - getter方法
+    @property
+    def name(self):
+        return self._name
 
 
-class Clock(object):
-    """数字时钟"""
+    # 访问器 - getter方法
+    @property
+    def age(self):
+        return self._age
 
-    def __init__(self, hour=0, minute=0, second=0):
-        """初始化方法
+    # 修改器 - setter方法
+    @age.setter
+    def age(self, age):
+        self._age = age
 
-        :param hour: 时
-        :param minute: 分
-        :param second: 秒
-        """
-        self._hour = hour
-        self._minute = minute
-        self._second = second
-
-    def run(self):
-        """走字"""
-        self._second += 1
-        if self._second == 60:
-            self._second = 0
-            self._minute += 1
-            if self._minute == 60:
-                self._minute = 0
-                self._hour += 1
-                if self._hour == 24:
-                    self._hour = 0
-
-    def show(self):
-        """显示时间"""
-        return '%02d:%02d:%02d' % \
-               (self._hour, self._minute, self._second)
+    def play(self):
+        if self._age <= 15:
+            print('%s正在玩飞行棋.' % self._name)
+        else:
+            print('%s正在玩斗地主.' % self._name)
 
 
 def main():
-    clock = Clock(23, 59, 58)
-    while True:
-        print(clock.show())
-        sleep(1)
-        clock.run()
+    person = Person('王大锤', 12)
+    person.play()
+    person.age = 22
+    person.play()
+    # person.name = '白元芳'  # AttributeError: can't set attribute
 
 
 if __name__ == '__main__':
